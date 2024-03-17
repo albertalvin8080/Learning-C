@@ -1,1 +1,2 @@
-# Learning_C
+# Description
+C Programming Learning Repository.
