@@ -3,9 +3,10 @@
  Name        : list.h
  Author      : Anderson Moreira
  E-mail		 : anderson.moreira@recife.ifpe.edu.br
+ Contributor : Albert Alvin
  Version     : 13/06/2012
  Copyright   :
- Description : implementação das funções de uma lista de inteiros
+ Description : implementaï¿½ï¿½o das funï¿½ï¿½es de uma lista de inteiros
  ============================================================================
  */
 

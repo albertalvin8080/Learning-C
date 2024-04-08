@@ -3,9 +3,10 @@
  Name        : main.c
  Author      : Anderson Moreira
  E-mail		 : anderson.moreira@recife.ifpe.edu.br
+ Contributor : Albert Alvin
  Version     : 13/06/2012
  Copyright   :
- Description : entendimento do funcionamento de código POSIX de uso em SO
+ Description : entendimento do funcionamento de cï¿½digo POSIX de uso em SO
  ============================================================================
  */
 
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
  	
 	printf("<<START>>\n");
 
-	/* inicialização da lista */
+	/* inicializaï¿½ï¿½o da lista */
 	list = lst_new();
 
 	/* insert several elements into list */
