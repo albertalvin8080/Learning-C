@@ -54,6 +54,8 @@ JPA_Hibernate/first-test/mysql-data/
 **/target/
 **/out/
 
+**/*.out
+
 **/mongodb_data/
 
 # C/*/*.exe
@@ -63,6 +65,20 @@ JPA_Hibernate/first-test/mysql-data/
 **/node_modules/
 
 */**/.gitignore
+
+# VSCODE
+**/x64/
+**/x86/
+**/.cproject
+**/.vs
+**/_Dependencies/
+**/*.sln
+**/*.vcxproj
+**/*.vcxproj.filters
+**/*.vcxproj.user
+**/*.h.gch # compiled header files
+
+**/*.class
 
 -- TESTING --
 **/*.madmoiselle
