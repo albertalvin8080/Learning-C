@@ -13,7 +13,9 @@ int main()
     // `x` is a pointer to an array of pointers which point to a function which returns an integer.
     int (*(*x)[])() = &y;
 
-    // dereference x -> take the first function pointer -> call the function using the pointer.
+    // 1. dereference x 
+    // 2. take the first function pointer
+    // 3. call the function using the pointer.
     int n = (*x)[0]();
     // int n = (*(*x)[0])(); // Optional: dereference the function pointer before call.
 
