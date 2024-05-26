@@ -24,8 +24,8 @@ int main() {
     char *(*(*x[][8])())[] = { {&fun} };
     // x[0][0]();
 
-    // 1. index the 8-length-array
-    // 2. index the function pointer
+    // 1. index the array
+    // 2. index the 8-length-array
     // 3. call the function
     // 4. dereference the returned pointer
     // 5. index the first element of the array (a pointer)
