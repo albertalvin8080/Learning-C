@@ -13,11 +13,11 @@ target/
 *.ipr
 
 ### Eclipse ###
-.apt_generated
-.classpath
+**/.apt_generated/
+**/.classpath
 .factorypath
-.project
-.settings
+**/.project
+**/.settings/
 .springBeans
 .sts4-cache
 
@@ -45,6 +45,7 @@ JPA_Hibernate/first-test/mysql-data/
 
 **/.idea/
 **/.vscode/
+**/.vs
 
 **/grafana-storage/
 
@@ -80,6 +81,18 @@ JPA_Hibernate/first-test/mysql-data/
 
 **/*.class
 
--- TESTING --
-**/*.madmoiselle
-# TESTING COPY SH
+**/.metadata
+
+**/.venv
+**/__pycache__
+**/.pytest_cache
+
+**/client.keystore
+**/client.truststore
+**/server.keystore
+**/server.truststore
+
+**/docker-data/
+
+#*/mvnw
+#*/mvnw.cmd
