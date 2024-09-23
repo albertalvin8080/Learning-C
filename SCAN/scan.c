@@ -123,7 +123,7 @@ void *perform_readOrWrite(void *arg)
             printf("-> direction = %s\n", direction == 1 ? "positive" : "negative");
         }
 
-        pointer_current_sector++;
+        ++pointer_current_sector;
 
         sem_post(&sem);
         // sleep(1);
@@ -140,15 +140,16 @@ void *request_readOrWrite(void *arg)
         sem_wait(&sem);
         if (!is_queue_full())
         {
-            int data = rand() % 1000 + 100; // 100 to 1099
+            //int data = rand() % 1000 + 100; // 100 to 1099
             int track = rand() % TRACK_SIZE;
             int sector = rand() % SECTOR_SIZE;
             int op_flag = rand() % 2 + 1; // 1 to 2
+		 int data = op_flag == READ_FLAG ? -1 :  rand() % 1000 + 100;
 
             ReadOrWriteRequest request = {data, track, sector, op_flag};
 
             enqueue(request);
-            printf("OS: New request enqueued: Data=%d, Track=%d, Sector=%d, OpFlag=%d\n", data, track, sector, op_flag);
+            printf("OS: New request enqueued: Data=%d, Track=%d, Sector=%d, OpFlag=%d(%s)\n", data, track, sector, op_flag, (op_flag == READ_FLAG ? "READ" : "WRITE"));
         }
         else
         {
