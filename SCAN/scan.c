@@ -58,7 +58,7 @@ void enqueue(ReadOrWriteRequest request)
 
 ReadOrWriteRequest dequeue()
 {
-    ReadOrWriteRequest request = {0, 0, 0, 0};
+    ReadOrWriteRequest request = {-1, -1, -1, -1};
     if (!is_queue_empty())
     {
         request = requests_queue[front];
@@ -70,7 +70,7 @@ ReadOrWriteRequest dequeue()
 
 ReadOrWriteRequest peek()
 {
-    ReadOrWriteRequest request = {0, 0, 0, 0};
+    ReadOrWriteRequest request = {-1, -1, -1, -1};
     if (!is_queue_empty())
     {
         request = requests_queue[front];
@@ -140,7 +140,7 @@ void *request_readOrWrite(void *arg)
         sem_wait(&sem);
         if (!is_queue_full())
         {
-            int data = rand() % 1000; // 0 to 999
+            int data = rand() % 1000 + 100; // 100 to 1099
             int track = rand() % TRACK_SIZE;
             int sector = rand() % SECTOR_SIZE;
             int op_flag = rand() % 2 + 1; // 1 to 2
