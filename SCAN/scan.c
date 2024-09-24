@@ -144,7 +144,7 @@ void *request_readOrWrite(void *arg)
             int track = rand() % TRACK_SIZE;
             int sector = rand() % SECTOR_SIZE;
             int op_flag = rand() % 2 + 1; // 1 to 2
-		 int data = op_flag == READ_FLAG ? -1 :  rand() % 1000 + 100;
+	    int data = op_flag == READ_FLAG ? -1 :  rand() % 1000 + 100;
 
             ReadOrWriteRequest request = {data, track, sector, op_flag};
 
