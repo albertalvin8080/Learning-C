@@ -18,7 +18,8 @@ void quicksort(int *arr, int start, int end)
     /*
     The loop should continue as long as i is less than or equal to j, because
     at this point, there might still be elements on the left that need to go
-    to the right (or vice versa), especially when i equals j
+    to the right (or vice versa), especially when i equals j (the element i+1)
+    might need to change places with the pivot
     */
     while (i <= j)
     {
@@ -47,6 +48,7 @@ void quicksort(int *arr, int start, int end)
 
 void print_arr(int *arr)
 {
+    printf("->> ");
     for (int i = 0; i < ARR_SIZE; ++i)
         printf("%d, ", arr[i]);
     printf("\n");
