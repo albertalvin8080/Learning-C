@@ -19,8 +19,8 @@ int square_plot_max_side(double bigger_side, int smaller_side)
 int main()
 {
     /*
-    Unexpected good behavior: if you switch the positions of the bigger and smaller sides,
-    this algorithm will first invert their position.
+    Unexpected positive behavior: if you switch the positions of the bigger and smaller sides
+    (like bigger = 80 and  smaller = 90), this algorithm will first invert their position.
     */
     int bigger_side = 1680; // try 80
     int smaller_side = 640; // try 90
